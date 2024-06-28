@@ -116,6 +116,8 @@
 }
 
 .button-row ul {
+  display: flex;
+  justify-content: center;
   list-style: none;
   font-weight: bold;
 }
@@ -125,6 +127,7 @@
 }
 
 .button-row button {
+  /*display: flex;*/
   padding: 1rem;
   border-radius: 10%;
   font-weight: bold;
