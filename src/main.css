@@ -47,7 +47,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  position: relative;
   background-image: url("https://www.insidegymnastics.com/wp-content/uploads/2023/10/INSIDE-GYMNASTICS-AGWCH-Set-29-35.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -59,19 +58,23 @@
 
 
 .hero-text {
+  width: 100%;
   display: flex;
   justify-content: center;
-  align-items: flex-start !important;
   font-family: "Palatino Linotype";
   color: floralwhite;
   font-size: xx-large;
   font-weight: bolder;
 }
 
-
-.hero-button {
+.hero-button-container {
+  width: 100%;
   display: flex;
   justify-content: center;
+}
+
+
+.hero-button {
   background-color: navy;
   color: floralwhite;
   border-radius: 10%;
@@ -79,6 +82,11 @@
   border: solid;
   border-color: floralwhite;
 }
+
+.hero-button:hover {
+  background-color: slategray;
+}
+
 
 .under-hero {
   display: flex;
