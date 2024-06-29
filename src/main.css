@@ -50,7 +50,7 @@
   background-image: url("https://www.insidegymnastics.com/wp-content/uploads/2023/10/INSIDE-GYMNASTICS-AGWCH-Set-29-35.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  height: 60vh;
+  height: 50vh;
   border-bottom-style: solid;
   border-bottom-width: thick;
   border-color: lightslategray;
@@ -85,6 +85,7 @@
 
 .hero-button:hover {
   background-color: slategray;
+  cursor: pointer;
 }
 
 
