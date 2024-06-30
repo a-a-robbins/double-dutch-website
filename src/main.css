@@ -3,6 +3,10 @@
   background-color: floralwhite;
 }
 
+button:hover {
+  cursor: pointer !important;
+}
+
 .header {
   display: flex;
   align-items: center;
@@ -133,4 +137,142 @@
   border: none;
   background-color: slategray;
   color: floralwhite;
+}
+
+.button-row button:hover {
+  background-color: navy;
+}
+
+.classes-section {
+  font-family: sans-serif;
+}
+
+.toddler {
+  display: flex;
+  justify-content: flex-start;
+  border-bottom: solid;
+  border-top: solid;
+  border-color: floralwhite;
+  border-width: 0.5rem;
+}
+
+.toddler-image img {
+  display: flex;
+  max-width: 20vw;
+  height: 40vh;
+}
+
+.toddler-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: gainsboro;
+  color: navy;
+  padding: 2%;
+  line-height: 2rem;
+}
+
+.toddler-text a {
+  color: navy;
+}
+
+.toddler-text a > h3 {
+  display: flex;
+  justify-content: center;
+  color: navy;
+  text-decoration: none;
+}
+
+
+.kids {
+  display: flex;
+  justify-content: flex-start;
+  color: floralwhite;
+  border-bottom: solid;
+  border-color: floralwhite;
+  border-width: 0.5rem;
+}
+
+.kids-image img {
+  display: flex;
+  max-width: 20vw;
+  height: 40vh;
+}
+
+.kids-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: gray;
+  padding: 2%;
+  line-height: 2rem;
+}
+
+.kids-text a {
+  color: floralwhite;
+}
+
+.kids-text a > h3 {
+  display: flex;
+  justify-content: center;
+  color: floralwhite;
+}
+
+
+.recreational {
+  display: flex;
+  justify-content: flex-start;
+  border-bottom: solid;
+  border-color: floralwhite;
+  border-width: 0.5rem;
+}
+
+.recreational-image img {
+  display: flex;
+  max-width: 20vw;
+  height: auto;
+}
+
+.recreational-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: gainsboro;
+  color: navy;
+  padding: 2%;
+  line-height: 2rem;
+}
+
+.recreational-text a {
+  color: navy;
+}
+
+.recreational-text a > h3 {
+  display: flex;
+  justify-content: center;
+  color: navy;
+  text-decoration: none;
+}
+
+
+.space-before-footer {
+  background-color: blueviolet;
+  height: 10vh;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.name-side {
+  display: flex;
+  flex-direction: column;
+}
+
+.page-side {
+  display: flex;
+  flex-direction: column;
 }
