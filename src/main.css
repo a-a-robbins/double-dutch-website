@@ -56,8 +56,7 @@ button:hover {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  /* background-image: url("https://www.insidegymnastics.com/wp-content/uploads/2023/10/INSIDE-GYMNASTICS-AGWCH-Set-29-35.jpg"); */
-  background-image: url("./assets/DoubleDutch-Images/team-bars-cropped.jpg");
+  background-image: url("./assets/DoubleDutch-Images/team-bars-cropped.png");
   background-size: cover;
   background-repeat: no-repeat;
   height: 50vh;
@@ -66,12 +65,11 @@ button:hover {
   border-color: lightslategray;
 }
 
-÷
-
 .hero-text {
   width: 100%;
   display: flex;
   justify-content: center;
+  margin-top: 5rem;
   font-family: "Palatino Linotype";
   color: floralwhite;
   font-size: xx-large;
@@ -157,10 +155,6 @@ button:hover {
 .toddler {
   display: flex;
   justify-content: flex-start;
-  border-bottom: solid;
-  border-top: solid;
-  border-color: floralwhite;
-  border-width: 0.5rem;
 }
 
 .toddler-image img {
@@ -195,9 +189,10 @@ button:hover {
   display: flex;
   justify-content: flex-start;
   color: floralwhite;
-  border-bottom: solid;
+  /* border-bottom: solid;
+  border-top: solid;
   border-color: floralwhite;
-  border-width: 0.5rem;
+  border-width: 0.5rem; */
 }
 
 .kids-image img {
@@ -229,9 +224,6 @@ button:hover {
 .recreational {
   display: flex;
   justify-content: flex-start;
-  border-bottom: solid;
-  border-color: floralwhite;
-  border-width: 0.5rem;
 }
 
 .recreational-image img {
