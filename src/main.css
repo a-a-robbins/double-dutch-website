@@ -37,7 +37,13 @@ button:hover {
 }
 
 .tab-list li {
+  display: flex;
   margin-right: 1rem;
+  color: slategray;
+}
+
+.tab-list a {
+  text-decoration: none;
 }
 
 .parent-portal {
