@@ -195,10 +195,7 @@ button:hover {
   display: flex;
   justify-content: flex-start;
   color: floralwhite;
-  /* border-bottom: solid;
-  border-top: solid;
-  border-color: floralwhite;
-  border-width: 0.5rem; */
+
 }
 
 .kids-image img {
