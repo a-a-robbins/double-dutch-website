@@ -9,9 +9,9 @@ body {
 
 button:hover {
     cursor: pointer !important;
-  }
-  
-  .header {
+}
+
+.header {
     display: flex;
     align-items: center;
     font-family: sans-serif;
@@ -21,37 +21,37 @@ button:hover {
     border-bottom: solid;
     border-color: slategray;
     background-color: floralwhite;
-  }
-  
-  .header-icon{
+}
+
+.header-icon {
     display: flex;
     max-width: 5%;
     padding-top: 1%;
     padding-bottom: 1%;
-  }
-  
-  .header-title {
+}
+
+.header-title {
     font-family: "Palatino Linotype";
-  }
-  
-  .tab-list {
+}
+
+.tab-list {
     list-style-type: none;
     display: flex;
     margin-left: auto;
     font-weight: bold;
-  }
-  
-  .tab-list li {
+}
+
+.tab-list li {
     display: flex;
     margin-right: 1rem;
     color: slategray;
-  }
-  
-  .tab-list a {
+}
+
+.tab-list a {
     text-decoration: none;
-  }
-  
-  .parent-portal {
+}
+
+.parent-portal {
     display: flex;
     padding: 0.7rem;
     border-radius: 5%;
@@ -59,4 +59,51 @@ button:hover {
     border: none;
     background-color: slategray;
     color: floralwhite;
+}
+
+.coach-image {
+    display: flex;
+    justify-content: center;
+    background-color: slategray;
+    padding: 5%;
+}
+
+.coach-image img {
+    width: 35%;
+    border-radius: 10%;
+    border-color: floralwhite;
+    border-width: 1rem;
+    border-style: solid;
+}
+
+.coach-name {
+    color: floralwhite;
+}
+
+.bio-text {
+    background-color: gainsboro;
+    padding: 3%;
+}
+
+.bio-text p {
+    color: navy;
+    line-height: 1.5rem;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 2%;
+    margin-top: 5rem;
+    background-color: floralwhite;
+  }
+  
+  .name-side {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .page-side {
+    display: flex;
+    flex-direction: column;
   }
