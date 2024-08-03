@@ -1,0 +1,85 @@
+
+body {
+    background-color: blueviolet;
+}
+
+h1 {
+    color: floralwhite;
+    display: flex;
+    justify-content: center;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    font-family: sans-serif;
+    color: GrayText;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-bottom: solid;
+    border-color: slategray;
+    background-color: floralwhite;
+  }
+  
+  .header-icon{
+    display: flex;
+    max-width: 5%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+  }
+  
+  .header-title {
+    font-family: "Palatino Linotype";
+  }
+  
+  .tab-list {
+    list-style-type: none;
+    display: flex;
+    margin-left: auto;
+    font-weight: bold;
+  }
+  
+  .tab-list li {
+    display: flex;
+    margin-right: 1rem;
+    color: slategray;
+  }
+  
+  .tab-list a {
+    text-decoration: none;
+  }
+  
+  .parent-portal {
+    display: flex;
+    padding: 0.7rem;
+    border-radius: 5%;
+    font-weight: bold;
+    border: none;
+    background-color: slategray;
+    color: floralwhite;
+  }
+
+  .list-content {
+    background-color: gainsboro;
+    padding: 5%;
+    line-height: 2rem;
+  }
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-top: 2rem;
+    background-color: floralwhite;
+  }
+  
+  .name-side {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .page-side {
+    display: flex;
+    flex-direction: column;
+  }

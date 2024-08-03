@@ -23,3 +23,4 @@
 > Fix header routing...all page routing?
 > Make all fonts match across site
 > Change "Parent Portal" to "Parent Info" --- unless Attie has a legit portal
+> Make the layout better
