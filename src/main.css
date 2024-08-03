@@ -158,6 +158,38 @@ button:hover {
   font-family: sans-serif;
 }
 
+.mommy-and-me {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.mommy-and-me-image img {
+  display: flex;
+  max-width: 20vw;
+  height: 40vh;
+}
+
+.mommy-and-me-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: gainsboro;
+  color: navy;
+  padding: 2%;
+  line-height: 2rem;
+}
+
+.toddler-text a {
+  color: navy;
+}
+
+.toddler-text a > h3 {
+  display: flex;
+  justify-content: center;
+  color: navy;
+  text-decoration: none;
+}
+
 .toddler {
   display: flex;
   justify-content: flex-start;
@@ -250,6 +282,39 @@ button:hover {
 }
 
 .recreational-text a > h3 {
+  display: flex;
+  justify-content: center;
+  color: navy;
+  text-decoration: none;
+}
+
+
+.pre-team {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.pre-team-image img {
+  display: flex;
+  max-width: 20vw;
+  height: auto;
+}
+
+.pre-team-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: floralwhite;
+  color: navy;
+  padding: 2%;
+  line-height: 2rem;
+}
+
+.pre-team-text a {
+  color: navy;
+}
+
+.pre-team-text a > h3 {
   display: flex;
   justify-content: center;
   color: navy;
