@@ -11,9 +11,14 @@
     *6/29:* 5 hours
     *7/7:* 3 hours
     *7/17:* 2 hours
-    *8/1:* 630pm -
+    *8/1:* 630pm - 730, 8-
 
 
 ## TODO
 
-> Get 
+> Separate header and footer to be pulled in
+> Make footer more better
+> RESPONSIVE!! Rebuild? 
+> Finish subpages
+> Fix header routing...all page routing?
+> Make all fonts match across site
