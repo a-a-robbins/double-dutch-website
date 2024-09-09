@@ -1,4 +1,9 @@
-﻿body {
+﻿@media (min-width: 768px) {
+  .navbar-toggler {
+      display: none;
+  }
+}
+/* body {
   margin: 0;
   background-color: floralwhite;
 }
@@ -342,4 +347,4 @@ button:hover {
 .page-side {
   display: flex;
   flex-direction: column;
-}
+} */
