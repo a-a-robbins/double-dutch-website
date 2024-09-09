@@ -11,8 +11,9 @@
     *6/29:* 5 hours
     *7/7:* 3 hours
     *7/17:* 2 hours
-    *8/1:* 630pm - 730, 8-
-
+    *8/1:* 630pm - 730, 8-1030
+    *8/9:* 2 hours
+    *8/10:* 1 hour
 
 ## TODO
 
@@ -24,3 +25,7 @@
 > Make all fonts match across site
 > Change "Parent Portal" to "Parent Info" --- unless Attie has a legit portal
 > Make the layout better
+> Need schedule
+> Need FAQ if we want it
+> Set up announcement feed
+> Need announcements
