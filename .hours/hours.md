@@ -29,3 +29,14 @@
 > Need FAQ if we want it
 > Set up announcement feed
 > Need announcements
+
+
+## QUESTIONS for ATTIE
+
+> Where do we want the "Learn More" button to go?
+> Is there a standard Jackrabbit link I can send people to from the classes section (One that wouldn't need updating every time a session changed/ended)?
+> You mentioned wanting a "Parent Portal" what would you like to put in there?
+> Do you have any announcements you'd like to make/do we still want this page?
+> Do you have a favorite photo to use for each class section?
+> Do you want pricing anywhere?
+> Are there other pages you'd like and what would you like on them?
