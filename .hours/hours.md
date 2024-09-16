@@ -16,30 +16,18 @@
     *8/10:* 1 hour
 
 ## TODO
-
-> Separate header and footer to be pulled in
-> Make footer more better
-> RESPONSIVE!! Rebuild? 
-> Finish subpages
-> Fix header routing...all page routing?
-> Make all fonts match across site
-> Change "Parent Portal" to "Parent Info" --- unless Attie has a legit portal
-> Make the layout better
-> Need schedule
-> Need FAQ if we want it
-> Set up announcement feed
-> Need announcements
-> Setup social media links
+> Set up announcement feed?
 
 
 ## QUESTIONS for ATTIE
 
-> Where do we want the "Learn More" button to go?
+> Where do we want the "Learn More" button to go? It could also turn into a "Register" button
 > Is there a standard Jackrabbit link I can send people to from the classes section (One that wouldn't need updating every time a session changed/ended)?
 > You mentioned wanting a "Parent Portal" what would you like to put in there?
-> Do you have any announcements you'd like to make/do we still want this page?
+> Do you have any announcements you'd like to make/do we still want this page? If we want it, do you want me to link the last 3 facebook posts to it?
 > Do you have a favorite photo to use for each class section?
 > Do you want pricing anywhere?
 > Are there other pages you'd like and what would you like on them?
 > Do you have a schedule for the fall you'd like posted outside of Jackrabbit?
 > Do you have a YT channel? 
+> Is there anything else you'd like on the homepage (besides classes or in addition to)?
