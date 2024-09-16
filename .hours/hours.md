@@ -29,6 +29,7 @@
 > Need FAQ if we want it
 > Set up announcement feed
 > Need announcements
+> Setup social media links
 
 
 ## QUESTIONS for ATTIE
@@ -40,3 +41,4 @@
 > Do you have a favorite photo to use for each class section?
 > Do you want pricing anywhere?
 > Are there other pages you'd like and what would you like on them?
+> Do you have a schedule for the fall you'd like posted outside of Jackrabbit?
