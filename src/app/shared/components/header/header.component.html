@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="/" (click)="closeNavbar()">
+      <img src="assets/logo.png" width="30" height="30" alt="Double Dutch Gymnastics Logo">
+    </a>
+    <button class="navbar-toggler" type="button" (click)="toggleNavbar()"
+            [class.collapsed]="!isNavbarOpen" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" [class.show]="isNavbarOpen">
+      <div class="navbar-nav ms-auto">
+        <a class="nav-link" routerLink="/announcements" routerLinkActive="active"
+           (click)="closeNavbar()">Announcements</a>
+        <a class="nav-link" routerLink="/" fragment="classes" routerLinkActive="active"
+           (click)="closeNavbar()">Classes</a>
+        <a class="nav-link" routerLink="/coaches" routerLinkActive="active"
+           (click)="closeNavbar()">Coaches</a>
+        <a class="nav-link" routerLink="/dress-code" routerLinkActive="active"
+           (click)="closeNavbar()">Dress Code</a>
+        <a class="nav-link" routerLink="/schedule" routerLinkActive="active"
+           (click)="closeNavbar()">Schedule</a>
+        <a class="nav-link" href="https://app.jackrabbitclass.com/jr3.0/ParentPortal/Login?orgID=552895"
+           target="_blank">Parent Portal</a>
+        <a class="nav-link" routerLink="/pricing" routerLinkActive="active"
+           (click)="closeNavbar()">Pricing</a>
+      </div>
+    </div>
+  </div>
+</nav>
