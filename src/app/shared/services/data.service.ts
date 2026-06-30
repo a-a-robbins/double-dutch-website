@@ -1,13 +1,76 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { Coach } from '../models/coach.model';
 import { ClassOffering } from '../models/class.model';
 import { Announcement } from '../models/announcement.model';
 import { Schedule } from '../models/schedule.model';
+import { SupabaseService } from './supabase.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
+  private supabase = inject(SupabaseService);
+
+  async getCoachesFromSupabase(): Promise<Coach[]> {
+    const { data, error } = await this.supabase.client
+      .from('coaches')
+      .select('*')
+      .order('id');
+    if (error) throw error;
+    return (data ?? []).map(c => ({
+      id: c.id,
+      name: c.name,
+      title: c.title,
+      bio: c.bio,
+      imagePath: c.image_path,
+    }));
+  }
+
+  async getClassesFromSupabase(): Promise<ClassOffering[]> {
+    const { data, error } = await this.supabase.client
+      .from('classes')
+      .select('*')
+      .order('id');
+    if (error) throw error;
+    return (data ?? []).map(c => ({
+      id: c.id,
+      name: c.name,
+      ageRange: c.age_range,
+      description: c.description,
+      duration: c.duration,
+      imagePath: c.image_path,
+      details: c.details ?? [],
+    }));
+  }
+
+  async getAnnouncementsFromSupabase(): Promise<Announcement[]> {
+    const { data, error } = await this.supabase.client
+      .from('announcements')
+      .select('*')
+      .order('published_date', { ascending: false });
+    if (error) throw error;
+    return (data ?? []).map(a => ({
+      id: a.id,
+      title: a.title,
+      content: a.content,
+      date: new Date(a.published_date),
+      imagePath: a.image_path ?? undefined,
+    }));
+  }
+
+  async getSchedulesFromSupabase(): Promise<Schedule[]> {
+    const { data, error } = await this.supabase.client
+      .from('schedules')
+      .select('*')
+      .order('id');
+    if (error) throw error;
+    return (data ?? []).map(s => ({
+      id: s.id,
+      title: s.title,
+      imagePath: s.image_path,
+      description: s.description ?? undefined,
+    }));
+  }
 
   getCoaches(): Coach[] {
     return [
