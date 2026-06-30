@@ -15,4 +15,9 @@ export class SupabaseService {
   get client(): SupabaseClient {
     return this.supabase;
   }
+
+  getImageUrl(path: string): string {
+    const { data } = this.supabase.storage.from('gymnastics-images').getPublicUrl(path);
+    return data.publicUrl;
+  }
 }

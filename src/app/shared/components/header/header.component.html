@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
     <a class="navbar-brand" routerLink="/" (click)="closeNavbar()">
-      <img src="assets/logo.png" width="30" height="30" alt="Double Dutch Gymnastics Logo">
+      <img [src]="logoUrl" width="30" height="30" alt="Double Dutch Gymnastics Logo">
     </a>
     <button class="navbar-toggler" type="button" (click)="toggleNavbar()"
             [class.collapsed]="!isNavbarOpen" aria-label="Toggle navigation">

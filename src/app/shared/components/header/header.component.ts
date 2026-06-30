@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
+import { SupabaseService } from '../../services/supabase.service';
 
 @Component({
   selector: 'app-header',
@@ -8,6 +9,8 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
+  private supabase = inject(SupabaseService);
+  logoUrl = this.supabase.getImageUrl('logo.webp');
   isNavbarOpen = false;
 
   toggleNavbar(): void {
