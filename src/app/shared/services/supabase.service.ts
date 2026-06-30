@@ -1,23 +1,24 @@
-import { Injectable, inject } from '@angular/core';
-import { createClient, SupabaseClient } from '@supabase/supabase-js';
+import { Injectable } from '@angular/core';
+import type { SupabaseClient } from '@supabase/supabase-js';
 import { environment } from '../../../environments/environment';
+
+const STORAGE_URL = `${environment.supabaseUrl}/storage/v1/object/public/gymnastics-images`;
 
 @Injectable({
   providedIn: 'root'
 })
 export class SupabaseService {
-  private supabase: SupabaseClient;
+  private supabase: SupabaseClient | null = null;
 
-  constructor() {
-    this.supabase = createClient(environment.supabaseUrl, environment.supabaseKey);
-  }
-
-  get client(): SupabaseClient {
+  async getClient(): Promise<SupabaseClient> {
+    if (!this.supabase) {
+      const { createClient } = await import('@supabase/supabase-js');
+      this.supabase = createClient(environment.supabaseUrl, environment.supabaseKey);
+    }
     return this.supabase;
   }
 
   getImageUrl(path: string): string {
-    const { data } = this.supabase.storage.from('gymnastics-images').getPublicUrl(path);
-    return data.publicUrl;
+    return `${STORAGE_URL}/${path}`;
   }
 }

@@ -12,7 +12,8 @@ export class DataService {
   private supabase = inject(SupabaseService);
 
   async getCoachesFromSupabase(): Promise<Coach[]> {
-    const { data, error } = await this.supabase.client
+    const client = await this.supabase.getClient();
+    const { data, error } = await client
       .from('coaches')
       .select('*')
       .order('id');
@@ -27,7 +28,8 @@ export class DataService {
   }
 
   async getClassesFromSupabase(): Promise<ClassOffering[]> {
-    const { data, error } = await this.supabase.client
+    const client = await this.supabase.getClient();
+    const { data, error } = await client
       .from('classes')
       .select('*')
       .order('id');
@@ -44,7 +46,8 @@ export class DataService {
   }
 
   async getAnnouncementsFromSupabase(): Promise<Announcement[]> {
-    const { data, error } = await this.supabase.client
+    const client = await this.supabase.getClient();
+    const { data, error } = await client
       .from('announcements')
       .select('*')
       .order('published_date', { ascending: false });
@@ -59,7 +62,8 @@ export class DataService {
   }
 
   async getSchedulesFromSupabase(): Promise<Schedule[]> {
-    const { data, error } = await this.supabase.client
+    const client = await this.supabase.getClient();
+    const { data, error } = await client
       .from('schedules')
       .select('*')
       .order('id');
