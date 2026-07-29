@@ -1,80 +1,13 @@
-import { Injectable, inject } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { Coach } from '../models/coach.model';
 import { ClassOffering } from '../models/class.model';
 import { Announcement } from '../models/announcement.model';
 import { Schedule } from '../models/schedule.model';
-import { SupabaseService } from './supabase.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
-  private supabase = inject(SupabaseService);
-
-  async getCoachesFromSupabase(): Promise<Coach[]> {
-    const client = await this.supabase.getClient();
-    const { data, error } = await client
-      .from('coaches')
-      .select('*')
-      .order('id');
-    if (error) throw error;
-    return (data ?? []).map(c => ({
-      id: c.id,
-      name: c.name,
-      title: c.title,
-      bio: c.bio,
-      imagePath: this.supabase.getImageUrl(c.image_path),
-    }));
-  }
-
-  async getClassesFromSupabase(): Promise<ClassOffering[]> {
-    const client = await this.supabase.getClient();
-    const { data, error } = await client
-      .from('classes')
-      .select('*')
-      .order('id');
-    if (error) throw error;
-    return (data ?? []).map(c => ({
-      id: c.id,
-      name: c.name,
-      ageRange: c.age_range,
-      description: c.description,
-      duration: c.duration,
-      imagePath: this.supabase.getImageUrl(c.image_path),
-      details: c.details ?? [],
-    }));
-  }
-
-  async getAnnouncementsFromSupabase(): Promise<Announcement[]> {
-    const client = await this.supabase.getClient();
-    const { data, error } = await client
-      .from('announcements')
-      .select('*')
-      .order('published_date', { ascending: false });
-    if (error) throw error;
-    return (data ?? []).map(a => ({
-      id: a.id,
-      title: a.title,
-      content: a.content,
-      date: new Date(a.published_date),
-      imagePath: a.image_path ? this.supabase.getImageUrl(a.image_path) : undefined,
-    }));
-  }
-
-  async getSchedulesFromSupabase(): Promise<Schedule[]> {
-    const client = await this.supabase.getClient();
-    const { data, error } = await client
-      .from('schedules')
-      .select('*')
-      .order('id');
-    if (error) throw error;
-    return (data ?? []).map(s => ({
-      id: s.id,
-      title: s.title,
-      imagePath: this.supabase.getImageUrl(s.image_path),
-      description: s.description ?? undefined,
-    }));
-  }
 
   getCoaches(): Coach[] {
     return [
@@ -82,7 +15,7 @@ export class DataService {
         id: 1,
         name: 'Attie Doak',
         title: 'HEAD COACH',
-        imagePath: this.supabase.getImageUrl('attie-profile.webp'),
+        imagePath: 'assets/DoubleDutch-Images/attie-profile.webp',
         bio: `My love for gymnastics started at seven years old, I was determined to teach myself with the help from an amazing neighbor. The greatest gift for my 9th birthday was my mom signing me up for a gymnastics class and I was hooked!
 
 I was a gymnast until 17 when I discovered my love for teaching others gymnastics. I've never looked back, teaching others gymnastics quickly became my passion. Teaching came pretty natural, I've always enjoyed being the 3rd of eight children who also homeschooled. So teaching others has also been an important part of my life as long as I can remember.
@@ -95,7 +28,7 @@ I've taught all ages from 18 months to 18 years both girls and boys. I've also d
         id: 2,
         name: 'Gena Doak',
         title: 'ASSISTANT COACH',
-        imagePath: this.supabase.getImageUrl('gena-profile.webp'),
+        imagePath: 'assets/DoubleDutch-Images/gena-profile.webp',
         bio: `I started gymnastics at the age of four and continued over the past six years with my love for the sport. I homeschool daily with a focus on learning responsibility, my education, and of course, playing hard.
 
 I also love music and singing. I participate in choir and take violin & piano lessons.
@@ -106,7 +39,7 @@ I enjoy the opportunity to teach others gymnastics skills safely while helping t
         id: 3,
         name: 'Gib Doak',
         title: 'JUNIOR COACH ASSISTANT',
-        imagePath: this.supabase.getImageUrl('gib-profile.webp'),
+        imagePath: 'assets/DoubleDutch-Images/gib-profile.webp',
         bio: `I started gymnastics at the age of four and continued over the past six years with my love for the sport. I homeschool daily with a focus on learning responsibility, my education, and of course, playing hard.
 
 I also love music and singing. I participate in choir and take violin & piano lessons.
@@ -117,7 +50,7 @@ I enjoy the opportunity to teach others gymnastics skills safely while helping t
         id: 4,
         name: 'Ruth',
         title: 'MEET THE TEAM',
-        imagePath: this.supabase.getImageUrl('ruth-profile.webp'),
+        imagePath: 'assets/DoubleDutch-Images/ruth-profile.webp',
         bio: `I am currently enjoying my freshman year in high school. I live on a farm and enjoy doing anything outdoors. I have 10 nieces and nephews, and love doing things with them. I've had an interest in gymnastics for as long as I can remember, and I'm excited to help your gymnasts!`
       }
     ];
@@ -129,7 +62,7 @@ I enjoy the opportunity to teach others gymnastics skills safely while helping t
         id: 1,
         name: 'Mommy & Me',
         ageRange: 'Ages 18mo - 2.5 years',
-        imagePath: this.supabase.getImageUrl('4I6A3005.webp'),
+        imagePath: 'assets/DoubleDutch-Images/4I6A3005.webp',
         duration: '30 minutes',
         description: 'Fun-based program that encourages bonding between parent and child during their fundamental developing stage. These classes are entry level and fun, with the goal of practicing following along in a group activity. We expect your children to possibly cry, protest, and or throw a fit. It\'s all part of the process of learning a new skill. DDG is always a guilt free parent zone.',
         details: [
@@ -143,7 +76,7 @@ I enjoy the opportunity to teach others gymnastics skills safely while helping t
         id: 2,
         name: 'Toddlers',
         ageRange: 'Ages 2.5 - 4.5 years',
-        imagePath: this.supabase.getImageUrl('toddler-bar.webp'),
+        imagePath: 'assets/DoubleDutch-Images/toddler-bar.webp',
         duration: '30 minutes',
         description: 'Fun-filled classes focused on learning in a safe and loving environment that is focused on learning how to be in a class and following in line. Along with the foundation of gymnastics!',
         details: [
@@ -157,7 +90,7 @@ I enjoy the opportunity to teach others gymnastics skills safely while helping t
         id: 3,
         name: 'Kids',
         ageRange: 'Ages 4.5 - 6.5 years',
-        imagePath: this.supabase.getImageUrl('recreational.webp'),
+        imagePath: 'assets/DoubleDutch-Images/recreational.webp',
         duration: '45 minutes',
         description: 'Fun-filled classes all about improvement! Your child will be encouraged to always try their best and strive to become better during every class.',
         details: [
@@ -170,7 +103,7 @@ I enjoy the opportunity to teach others gymnastics skills safely while helping t
         id: 4,
         name: 'Recreational',
         ageRange: 'Ages 6.5+',
-        imagePath: this.supabase.getImageUrl('4I6A2769.webp'),
+        imagePath: 'assets/DoubleDutch-Images/4I6A2769.webp',
         duration: '60 minutes',
         description: 'Fun-based classes all about success! Your child will be encouraged to succeed in everything they do, whether that takes a day or a year!',
         details: [
@@ -183,7 +116,7 @@ I enjoy the opportunity to teach others gymnastics skills safely while helping t
         id: 5,
         name: 'Pre-Team',
         ageRange: 'Ages 5+',
-        imagePath: this.supabase.getImageUrl('kid-handstand.webp'),
+        imagePath: 'assets/DoubleDutch-Images/kid-handstand.webp',
         duration: '90 minutes',
         description: 'This program is not a team commitment but the step before the team commitment. Parents must inquire by emailing ddgymnastics23@gmail.com',
         details: [
@@ -205,7 +138,7 @@ I enjoy the opportunity to teach others gymnastics skills safely while helping t
       {
         id: 1,
         title: 'Summer 2026 Schedule',
-        imagePath: this.supabase.getImageUrl('summer-26-schedule.webp'),
+        imagePath: 'assets/summer-26-schedule.webp',
         description: 'Current summer session schedule'
       }
     ];

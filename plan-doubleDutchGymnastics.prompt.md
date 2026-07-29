@@ -1,3 +1,6 @@
+# TODO When pick back up (7/1/2026): get data from new db tables + delete hardcoded data (no fall backs)
+
+
 # Double Dutch Gymnastics: Angular Migration & Backend Integration Plan
 
 Complete step-by-step guide for converting static website to Angular frontend with .NET Core + PostgreSQL (Supabase) backend.
