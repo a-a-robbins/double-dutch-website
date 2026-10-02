@@ -1,0 +1,26 @@
+<div class="container py-5">
+  <h1 class="text-center mb-5">Announcements</h1>
+
+  @if (announcements.length === 0) {
+    <div class="announcement-info text-center">
+      <p class="mb-0 fw-semibold">No announcements at this time. Check back soon!</p>
+    </div>
+  }
+
+  <div class="row">
+    <div class="col-lg-8 offset-lg-2">
+      @for (announcement of announcements; track announcement.id) {
+        <div class="card mb-4 shadow-sm">
+          @if (announcement.imagePath) {
+            <img [src]="announcement.imagePath" class="card-img-top" [alt]="announcement.title">
+          }
+          <div class="card-body">
+            <h5 class="card-title">{{ announcement.title }}</h5>
+            <p class="card-text small text-muted">{{ announcement.date | date: 'MMM d, yyyy' }}</p>
+            <p class="card-text">{{ announcement.content }}</p>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</div>

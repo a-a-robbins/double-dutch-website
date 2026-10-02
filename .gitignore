@@ -1,1 +1,8 @@
 node_modules
+.DS_Store
+dist
+out-tsc
+*.log
+.vscode/settings.json
+.angular
+src-html

@@ -1,0 +1,40 @@
+<div class="container py-5">
+  <h1 class="text-center mb-5">Class Schedules</h1>
+
+  <div class="row">
+    @for (schedule of schedules; track schedule.id) {
+      <div class="col-lg-8 offset-lg-2 mb-4">
+        <div class="card shadow-sm">
+          <div class="schedule-image-wrapper" (click)="openModal(schedule.imagePath)">
+            <img [src]="schedule.imagePath" class="card-img-top" [alt]="schedule.title" loading="lazy">
+            <div class="zoom-hint">
+              <i class="fas fa-search-plus"></i> Click to enlarge
+            </div>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">{{ schedule.title }}</h5>
+            <p class="card-text text-muted">{{ schedule.description }}</p>
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+
+  <div class="row mt-5">
+    <div class="col-lg-8 offset-lg-2">
+      <div class="schedule-alert">
+        <h5 class="alert-heading">Need More Information?</h5>
+        <p class="mb-0">For detailed schedule information or to register for classes, visit our <a href="https://app.jackrabbitclass.com/jr3.0/ParentPortal/Login?orgID=552895" target="_blank">Parent Portal</a>.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+@if (showModal) {
+  <div class="modal-overlay" (click)="closeModal()">
+    <div class="modal-content" (click)="$event.stopPropagation()">
+      <button class="modal-close" (click)="closeModal()">&times;</button>
+      <img [src]="activeImage" alt="Schedule full view">
+    </div>
+  </div>
+}

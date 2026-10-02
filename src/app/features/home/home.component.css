@@ -1,0 +1,41 @@
+.hero-section {
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.hero-section h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.hero-section .lead {
+  font-size: 1.3rem;
+}
+
+.text-purple {
+  color: purple;
+  font-weight: 600;
+}
+
+.img-fluid {
+  transition: transform 0.3s ease;
+}
+
+.img-fluid:hover {
+  transform: scale(1.02);
+}
+
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+
+  .hero-section .lead {
+    font-size: 1rem;
+  }
+
+  .ps-lg-4 {
+    padding-left: 0 !important;
+  }
+}
